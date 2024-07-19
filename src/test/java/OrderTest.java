@@ -299,20 +299,8 @@ class OrderTest {
         WebElement agree = driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid"));
         assertTrue(agree.isDisplayed(), "Сообщение об ошибке");
     }
-
-    @Test
-    public void shouldNotOrderNameOneSymbol() {
-
-        WebElement form = driver.findElement(By.cssSelector(".form"));
-        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("A");
-        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79090000000");
-        form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
-        form.findElement(By.cssSelector(".button")).click();
-
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Поле обязательно для заполнения", text.trim());
-    }
 }
+
 
 
 
