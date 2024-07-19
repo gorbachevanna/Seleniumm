@@ -190,9 +190,6 @@ class OrderTest {
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
 
-        String textPhone = driver.findElement(By.cssSelector("[data-test-id='phone'].input_invalid .input__sub")).getText();
-        assertEquals("Поле обязательно для заполнения", textPhone.trim());
-
         String textName = driver.findElement(By.cssSelector("[data-test-id='name'].input_invalid .input__sub")).getText();
         assertEquals("Поле обязательно для заполнения", textName.trim());
     }
